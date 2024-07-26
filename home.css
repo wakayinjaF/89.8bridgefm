@@ -102,6 +102,10 @@ header{
     cursor: pointer;
     display: none;
 }
+}
+section{
+    padding: 85px 18% 65px;
+}
 .home{
     position: relative;
     width: 100%;
