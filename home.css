@@ -711,6 +711,40 @@ body.dark{
     display: block;
 }
 
+.search-field {
+  position: relative;
+  display: inline-block;
+}
+
+.search-field input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-field button[type="button"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-field button[type="button"]:hover {
+  background-color: #444;
+}
+
+.search-field input[type="search"]:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 
 /* body {
     font-family: Arial, sans-serif;
