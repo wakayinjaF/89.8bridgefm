@@ -46,3 +46,46 @@ uploadForm.addEventListener('submit', (e) => {
     imageInput.value = '';
     descriptionInput.value = '';
 });
+
+
+// Get the search input field, button, and results div
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const searchResults = document.getElementById('search-results');
+
+// Add an event listener to the search button
+searchButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm!== '') {
+        // Call the search function
+        search(searchTerm);
+    }
+});
+
+// Define the search function
+function search(searchTerm) {
+    // Assume we have a data array with objects containing title and content properties
+    const data = [
+        { title: 'Item 1', content: 'This is item 1' },
+        { title: 'Item 2', content: 'This is item 2' },
+        { title: 'Item 3', content: 'This is item 3' },
+        // Add more data objects here
+    ];
+
+    // Filter the data array based on the search term
+    const results = data.filter((item) => {
+        return item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+               item.content.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+
+    // Display the search results
+    searchResults.innerHTML = '';
+    results.forEach((item) => {
+        const resultHTML = `
+            <h2>${item.title}</h2>
+            <p>${item.content}</p>
+        `;
+        searchResults.innerHTML += resultHTML;
+    });
+}
