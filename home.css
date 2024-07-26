@@ -345,6 +345,30 @@ section{
     line-height: 32px;
     color: var(--other-color);
 }
+.testimonial-right form input[type="name"], 
+.testimonial-right form input[type="email"], 
+.testimonial-right form input[type="Text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Curve the corners */
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.testimonial-right form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Curve the corners */
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.testimonial-right form input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
 .newsletter{
     display: grid;
     justify-content: center;
